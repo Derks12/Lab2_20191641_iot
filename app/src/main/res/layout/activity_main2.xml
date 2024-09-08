@@ -126,7 +126,7 @@
     <GridView
         android:id="@+id/letras"
         android:layout_width="410dp"
-        android:layout_height="268dp"
+        android:layout_height="228dp"
         android:gravity="center"
         android:numColumns="7"
         android:padding="5dp"
@@ -134,8 +134,20 @@
         android:verticalSpacing="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/palabras" />
+        app:layout_constraintTop_toBottomOf="@+id/palabras"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Juego"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letras" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
