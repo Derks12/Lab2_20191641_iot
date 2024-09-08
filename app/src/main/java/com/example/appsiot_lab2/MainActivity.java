@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void abrirJuego(View view){
         Intent intent = new Intent(this,MainActivity2.class);
-        intent.putExtra()
         startActivity(intent);
     }
 
