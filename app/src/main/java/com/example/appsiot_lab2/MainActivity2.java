@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -29,12 +30,18 @@ public class MainActivity2 extends AppCompatActivity {
     private String palabraActual;
     private TextView[] letras;
     private LinearLayout wordLayout;
+    private LetterAdapter adapter;
+    private GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         palabras=getResources().getStringArray(R.array.palabras);
+        wordLayout=findViewById(R.id.palabras);
+        gridView = findViewById(R.id.letras);
+        random = new Random();
+        elegirPalabra();
     }
 
 
@@ -48,14 +55,15 @@ public class MainActivity2 extends AppCompatActivity {
         letras = new  TextView[palabraActual.length()];
         for (int i=0; i<palabraActual.length();i++){
             letras[i] = new TextView(this);
-            letras[i].setText(palabraActual.charAt(i));
+            letras[i].setText(String.format("%s", palabraActual.charAt(i)));
             letras[i].setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             letras[i].setGravity(Gravity.CENTER);
             letras[i].setTextColor(Color.WHITE);
             letras[i].setBackgroundResource(R.drawable.letras_base);
             wordLayout.addView(letras[i]);
         }
-
+        adapter=new LetterAdapter(this);
+        gridView.setAdapter(adapter);
     }
 
 }

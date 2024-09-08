@@ -8,89 +8,134 @@
 
     <RelativeLayout
 
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:gravity="center"
         tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/antena2_antena"
+            android:layout_width="match_parent"
+            android:layout_height="287dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_antena2fondo_foreground" />
+
+        <ImageView
+            android:id="@+id/image_brazo_derecho"
+            android:layout_width="88dp"
+            android:layout_height="87dp"
+            android:layout_alignTop="@+id/antena2_antena"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="109dp"
+            android:layout_marginEnd="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_brazo_derecho_foreground" />
+
+        <ImageView
+            android:id="@+id/image_pierna_izquierda"
+            android:layout_width="88dp"
+            android:layout_height="87dp"
+            android:layout_alignTop="@+id/antena2_antena"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="165dp"
+            android:layout_marginEnd="107dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_brazo_derecho_foreground" />
+
+        <ImageView
+            android:id="@+id/image_cabeza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/antena2_antena"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="75dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.749"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_cabeza_foreground" />
+
+        <ImageView
+            android:id="@+id/image_torso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/antena2_antena"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="109dp"
+            android:layout_marginEnd="75dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.749"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_torso_foreground" />
+
+        <ImageView
+            android:id="@+id/image_brazo_izquierdo"
+            android:layout_width="89dp"
+            android:layout_height="85dp"
+            android:layout_alignTop="@+id/antena2_antena"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="106dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.67"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_brazo_izquierdo_foreground" />
+
+        <ImageView
+            android:id="@+id/image_pierna_derecha"
+            android:layout_width="89dp"
+            android:layout_height="85dp"
+            android:layout_alignTop="@+id/antena2_antena"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="164dp"
+            android:layout_marginEnd="61dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_brazo_izquierdo_foreground" />
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/antena2_antena"
-        android:layout_width="347dp"
-        android:layout_height="287dp"
-        android:layout_marginTop="60dp"
+    <LinearLayout
+        android:id="@+id/palabras"
+        android:layout_width="412dp"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_antena2fondo_foreground" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/image_brazo_derecho"
-        android:layout_width="88dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="168dp"
+    <GridView
+        android:id="@+id/letras"
+        android:layout_width="410dp"
+        android:layout_height="268dp"
+        android:gravity="center"
+        android:numColumns="7"
+        android:padding="5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.801"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_brazo_derecho_foreground" />
-
-    <ImageView
-        android:id="@+id/image_pierna_izquierda"
-        android:layout_width="88dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="224dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_brazo_derecho_foreground" />
-
-    <ImageView
-        android:id="@+id/image_cabeza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.749"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_cabeza_foreground" />
-
-    <ImageView
-        android:id="@+id/image_torso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.749"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_torso_foreground" />
-
-    <ImageView
-        android:id="@+id/image_brazo_izquierdo"
-        android:layout_width="89dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.67"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_brazo_izquierdo_foreground" />
-
-    <ImageView
-        android:id="@+id/image_pierna_derecha"
-        android:layout_width="89dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="224dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.801"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_brazo_izquierdo_foreground" />
+        app:layout_constraintTop_toBottomOf="@+id/palabras" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
